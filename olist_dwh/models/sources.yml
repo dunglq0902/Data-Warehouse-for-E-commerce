@@ -1,0 +1,22 @@
+#File này báo cho dbt biết: 
+#"Nguồn dữ liệu của chúng ta tên là olist_raw, nó nằm trong schema raw, và nó chứa 9 bảng đó."
+version: 2
+
+# sources.yml dùng để khai báo "nguồn" dữ liệu thô
+sources:
+  # Đây là tên nguồn, hãy đặt là 'olist_raw'
+  - name: olist_raw
+    # Tên schema chứa dữ liệu thô trong PostgreSQL
+    schema: raw 
+
+    # Liệt kê tất cả các bảng thô của bạn tại đây
+    tables:
+      - name: raw_customers
+      - name: raw_geolocation
+      - name: raw_order_items
+      - name: raw_order_payments
+      - name: raw_order_reviews
+      - name: raw_orders
+      - name: raw_products
+      - name: raw_sellers
+      - name: raw_product_category_name_translation

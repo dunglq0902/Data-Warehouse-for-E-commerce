@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: fact_orders
+    description: "Bảng Fact trung tâm chứa các sự kiện đơn hàng."
+    columns:
+      - name: order_id
+        description: "Khóa ngoại trỏ đến đơn hàng." # Sửa mô tả
+        tests:
+          #- unique --< đã xóa
+          - not_null  # Kiểm tra xem có order_id nào bị rỗng (NULL) không
+
+      - name: customer_id
+        description: "Khóa ngoại trỏ đến dim_customers."
+        tests:
+          - not_null
+          - relationships:  # Kiểm tra xem mọi customer_id trong bảng fact_orders
+              to: ref('dim_customers')  # có tồn tại trong bảng dim_customers không
+              field: customer_id
+
+  - name: dim_customers
+    description: "Bảng Dimension chứa thông tin khách hàng."
+    columns:
+      - name: customer_id
+        description: "Khóa chính của khách hàng."
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_products
+    description: "Bảng Dimension chứa thông tin sản phẩm."
+    columns:
+      - name: product_id
+        description: "Khóa chính của sản phẩm."
+        tests:
+          - unique
+          - not_null

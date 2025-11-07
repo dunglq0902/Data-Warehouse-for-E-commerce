@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# dbt
+olist_dwh/logs/
+olist_dwh/target/
+olist_dwh/dbt_packages/
+
+# OS
+.DS_Store
