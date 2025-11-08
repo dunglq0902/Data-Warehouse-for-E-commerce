@@ -9,7 +9,7 @@ Project này mô phỏng quy trình ELT (Extract-Load-Transform) hiện đại, 
 Đây là sản phẩm cuối cùng, một dashboard phân tích 3 khía cạnh chính: Doanh thu, Tình trạng đơn hàng và Địa lý khách hàng.
 
 ![Hình ảnh Dashboard](images/Dashboard.png)
-*(Cách lấy link: Lên GitHub, vào repo, click "Add file" -> "Upload files", tải ảnh lên. Sau đó click vào ảnh đã tải lên và copy URL của nó)*
+
 
 ---
 
@@ -20,7 +20,7 @@ Project này sử dụng kiến trúc ELT. Dữ liệu được Tải (Load) và
 Sơ đồ luồng dữ liệu (Data Lineage) được tự động tạo bởi `dbt docs`:
 
 ![Data Lineage Graph](images/Data_Lineage_Graph.png)
-*(Cách lấy link: Tương tự như ảnh Dashboard)*
+
 
 ---
 
