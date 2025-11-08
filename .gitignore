@@ -14,3 +14,5 @@ olist_dwh/dbt_packages/
 
 # File chứa bí mật
 .env
+
+logs/
