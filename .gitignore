@@ -11,3 +11,6 @@ olist_dwh/dbt_packages/
 
 # OS
 .DS_Store
+
+# File chứa bí mật
+.env
