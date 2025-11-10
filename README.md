@@ -1,8 +1,8 @@
 # Project Kho Dữ Liệu (Data Warehouse) E-commerce Olist
 
-Đây là một project Data Engineering (DE) end-to-end (từ đầu đến cuối), xây dựng một Data Warehouse hoàn chỉnh cho bộ dữ liệu Olist E-commerce (100k đơn hàng tại Brazil).
+Đây là một project Data Engineering (DE) end-to-end (từ đầu đến cuối), xây dựng một Data Warehouse hoàn chỉnh cho bộ dữ liệu public Olist E-commerce (100k đơn hàng tại Brazil).
 
-Project này mô phỏng quy trình ELT (Extract-Load-Transform) hiện đại, từ dữ liệu thô (CSV) đến một Dashboard phân tích kinh doanh.
+Project này mô phỏng quy trình ELT (Extract-Load-Transform), từ dữ liệu thô (CSV) đến một Dashboard phân tích kinh doanh.
 
 ## 🌟 Dashboard Kết Quả (Looker Studio)
 
@@ -66,7 +66,7 @@ MyFirstDEProject/
 1.  Tạo database PostgreSQL (ví dụ: `ecommerce_dwh`) và schema `raw`.
 2.  Cài đặt thư viện Python: `pip install pandas sqlalchemy psycopg2-binary`
 3.  Chỉnh sửa chuỗi kết nối `db_url` trong file `load_raw_data.py`.
-4.  Chạy script: `python load_raw_data.py`.
+4.  Chỉnh sửa file path DataSet của bạn và chạy script: `python load_raw_data.py`.
 
 ### Bước 2: Biến đổi Dữ liệu (Transform)
 1.  Cài đặt dbt: `pip install dbt-postgres`
