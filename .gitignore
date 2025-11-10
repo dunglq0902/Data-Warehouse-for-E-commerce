@@ -16,3 +16,6 @@ olist_dwh/dbt_packages/
 .env
 
 logs/
+
+# Bỏ qua tất cả các thư mục log
+logs/
