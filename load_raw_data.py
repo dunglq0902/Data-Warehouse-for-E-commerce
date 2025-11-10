@@ -6,7 +6,7 @@ from dotenv import load_dotenv # <-- Thư viện mới
 # --- 1. TẢI BIẾN MÔI TRƯỜNG ---
 load_dotenv() # Tự động tìm và đọc file .env
 
-# Lấy thông tin từ file .env (AN TOÀN)
+# Lấy thông tin từ file .env
 db_user = os.environ.get("DB_USER")
 db_password = os.environ.get("DB_PASSWORD")
 db_host = os.environ.get("DB_HOST")
@@ -23,7 +23,7 @@ if not all([db_user, db_password, db_host, db_port, db_name]):
 db_url = f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
 
 # Đường dẫn đến thư mục chứa 9 file CSV
-data_dir = r"D:\MyFirstDEProject\DataSet" 
+data_dir = r"...\Data-Warehouse-for-E-commerce\DataSet" 
 
 # Tên 9 file CSV của bạn
 files_to_load = [
@@ -60,7 +60,7 @@ try:
             index=False
         )
 
-        print(f"✅ Tải thành công bảng: {table_name}")
+        print(f"✅Tải thành công bảng: {table_name}")
 
     print("\n🎉 Hoàn thành! Tất cả 9 file đã được tải lên schema 'raw'.")
 
